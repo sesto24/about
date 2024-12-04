@@ -205,7 +205,7 @@
         
         const audio = new Audio();
         audio.crossOrigin = "anonymous";
-        audio.src = "http://130.162.248.119:8000/radio.mp3";
+        audio.src = "https://130.162.248.119:8000/radio.mp3";
         
         const source = audioContext.createMediaElementSource(audio);
         source.connect(analyser);
@@ -1200,7 +1200,7 @@ function drawNetworkNodesVisualizer() {
 
         // Function to update track information
         function updateTrackInfo() {
-            fetch('http://130.162.248.119:8000/status-json.xsl')
+            fetch('https://130.162.248.119:8000/status-json.xsl')
                 .then(response => response.json())
                 .then(data => {
                     const trackTitle = data.icestats.source.title || 'Unknown Track';
